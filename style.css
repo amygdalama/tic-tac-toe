@@ -1,5 +1,12 @@
-canvas.board {
-    border-width : 1px;
-    border-style : solid;
+table, td {
+    border-width: 1px;
+    border-style: solid;
     border-color: black;
+}
+
+td {
+    text-align: center;
+    vertical-align: center;
+    height: 50px;
+    width: 50px;
 }
