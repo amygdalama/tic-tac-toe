@@ -1,17 +1,16 @@
 $(document).ready(function(){
 
     var markSquare = (function(){
-            console.log(this);
-            var i = 0;
-            return function(){
-                i+=1;
-                if (i % 2 === 0){
-                    return 'X';
-                } else {
-                    return 'O';
-                }
+        var mark
+        return function(){
+            if (mark === 'X'){
+                mark = 'O'
+            } else {
+                mark = 'X'
             }
-        });
+            return mark;
+        }
+    });
 
     var board = function(){
         var $table = $('<table></table>')
@@ -21,9 +20,13 @@ $(document).ready(function(){
         $('div').append($table)
         var mark = markSquare()
         $('td').on('click', function(){
-            console.log(mark)
-            $(this).text(mark)
-        })
+            if ($(this).text()){
+                alert('invalid square')
+            }
+            else {
+                $(this).text(mark())
+            }
+        });
     };
     board();
 });
