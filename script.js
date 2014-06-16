@@ -7,5 +7,5 @@ $(document).ready(function(){
         $('div').append($table)
     };
     board();
-    $('table').children().css('background-color', 'red');
+    $('table').find('tr').css('background-color', 'green');
 });
