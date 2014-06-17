@@ -12,6 +12,16 @@ $(document).ready(function(){
         }
     });
 
+    // var checkWinner = function(){
+    //     for (var i = 0; i < 3; i++){
+    //         var $row = $('tbody').children()[i]
+    //         for (var j = 0; j < 3; j++){
+    //             var $square = $row.children()[j]
+    //             $square
+    //         }
+    //     };
+    // };
+
     var board = function(){
         var $table = $('<table></table>')
         for (var i = 0; i < 3; i++){
@@ -24,7 +34,8 @@ $(document).ready(function(){
                 alert('invalid square')
             }
             else {
-                $(this).text(mark())
+                $(this).text(mark());
+                // checkWinner();
             }
         });
     };
